@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: rgb(49, 49, 49);
+    color: white;
+}
+
+.display, 
+.characters {
+    height: calc(50vh - 10px);
+    width: 40vw;
+    border-radius: 15px;
+    border: 2px solid orange;
+}
+
+.display {
+    margin-bottom: 5px;
+    background-color: rgb(24, 23, 23);
+    position: relative;
+}
+
+.display > h1 {
+    color: orange;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#screen {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    max-width: 100%;
+    max-height: 80%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.characters {
+    background: linear-gradient(to top right, black, rgb(27, 27, 27), rgb(61, 1, 61));
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.characters > * {
+    border: 1px solid blue;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.characters *:hover, 
+.characters *:focus,
+#opening:hover,
+#opening:focus,
+#closing:hover,
+#closing:focus {
+    background: rgba(0, 0, 0, 0.1);
+    border-color: rgb(74, 74, 248);
+}
+
+.characters * {
+    cursor: pointer;
+}
+
+.characters *:active {
+    transform: scale(0.9);
+}
+
+.orange {
+    color: orange;
+}
+
+.orange:hover,
+.orange:focus {
+    color:rgb(238, 189, 98);
+}
+
+#parentheses {
+    visibility: hidden;
+    cursor: default;
+    display: flex;
+    justify-content: space-evenly;
+    background: none;
+    border: none;
+}
+
+#parentheses:active {
+    transform: scale(1);
+}
+
+#parentheses div {
+    height: 100%;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#equal {
+    background-color: rgb(175, 120, 18);
+    border-radius: 50px;
+    border-color: transparent;
+}
+
+#equal:hover,
+#equal:focus {
+    background-color: rgba(158, 108, 15, 0.4);
+    color: orange;
+}
+
+.orange span {
+    margin-bottom: 5px;
+}
